@@ -1,0 +1,41 @@
+RewriteEngine On
+RewriteRule ^farm view_farm.php [L]
+
+RewriteRule ^mgraph visualize.php [L]
+RewriteRule ^out logout.php [L]
+RewriteRule ^addpig insertPig.php [L]
+RewriteRule ^checkdata gateway.php [L]
+RewriteRule ^home index.php [L]
+
+RewriteRule ^view/location/([0-9]+) choose_house.php?location=$1 [L]
+
+RewriteRule ^view/location/house/([0-9]+)/([0-9]+) choose_pen.php?location=$1&house=$2 [L]
+
+RewriteRule ^view/location/house/pen/([0-9]+)/([0-9]+)/([0-9]+) choose_pig.php?location=$1&house=$2&pen=$3 [L]
+
+RewriteRule ^view/location/house/pen/pig/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+) view_details.php?location=$1&house=$2&pen=$3&pig=$4 [L]
+RewriteRule ^view/location/house/pen/pig/weight/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/4 view_details.php?location=$1&house=$2&pen=$3&pig=$4&record=4 [L]
+RewriteRule ^view/location/house/pen/pig/mvmnt/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/1 view_details.php?location=$1&house=$2&pen=$3&pig=$4&record=1 [L]
+RewriteRule ^view/location/house/pen/pig/mrecord/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/2 view_details.php?location=$1&house=$2&pen=$3&pig=$4&record=2 [L]
+RewriteRule ^view/location/house/pen/pig/frecord/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/3 view_details.php?location=$1&house=$2&pen=$3&pig=$4&record=3 [L]
+RewriteRule ^view/location/house/pen/pig/mg/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/5 view_details.php?location=$1&house=$2&pen=$3&pig=$4&record=5 [L]
+
+
+RewriteRule ^insertmenu/location/house/pen/pig/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+) insert_tabmenu.php?location=$1&house=$2&pen=$3&pig=$4 [L]
+
+
+
+RewriteRule ^insertmenu/location/house/pen/pig/feeds/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+) insert_feeds.php?location=$1&house=$2&pen=$3&pig=$4 [L]
+
+
+
+RewriteRule ^insertmenu/location/house/pen/pig/meds/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+) insert_meds.php?location=$1&house=$2&pen=$3&pig=$4 [L]
+
+
+
+RewriteRule ^edit/location/house/pen/pig/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+) edit_details.php?location=$1&house=$2&pen=$3&pig=$4 [L]
+RewriteRule ^edit/location/house/pen/pig/weight/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/4 edit_details.php?location=$1&house=$2&pen=$3&pig=$4&record=4 [L]
+RewriteRule ^edit/location/house/pen/pig/mvmnt/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/1 edit_details.php?location=$1&house=$2&pen=$3&pig=$4&record=1 [L]
+RewriteRule ^edit/location/house/pen/pig/mrecord/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/2 edit_details.php?location=$1&house=$2&pen=$3&pig=$4&record=2 [L]
+RewriteRule ^edit/location/house/pen/pig/frecord/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/3 edit_details.php?location=$1&house=$2&pen=$3&pig=$4&record=3 [L]
+RewriteRule ^edit/location/house/pen/pig/mg/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/5 edit_details.php?location=$1&house=$2&pen=$3&pig=$4&record=5 [L]
